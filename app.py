@@ -107,7 +107,7 @@ def update_charts(state):
         ],
         "layout": {
             "title": {
-                "text": "Number of Death Reported",
+                "text": "Monthly Death Reported",
                 "x": 0.05,
                 "xanchor": "left"
             },
@@ -127,7 +127,7 @@ def update_charts(state):
         ],
         "layout": {
             "title": {
-                "text": "Number of Incidence Occurrence",
+                "text": "Monthly Incidents by State",
                 "x": 0.05,
                 "xanchor": "left"
             },
