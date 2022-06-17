@@ -127,7 +127,7 @@ def update_charts(state):
         ],
         "layout": {
             "title": {
-                "text": "Number Incidence Occurrence",
+                "text": "Number of Incidence Occurrence",
                 "x": 0.05,
                 "xanchor": "left"
             },
