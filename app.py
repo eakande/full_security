@@ -6,7 +6,7 @@ import numpy as np
 from dash.dependencies import Output, Input
 
 data = pd.read_csv("full_insecurity.csv")
-data['Date'] = pd.to_datetime(data['Date'], format="%b-%y")
+data['Date'] = pd.to_datetime(data['Date'], format="%y-%b")
 
 external_stylesheets = [
     {
