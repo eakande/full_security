@@ -6,7 +6,7 @@ import numpy as np
 from dash.dependencies import Output, Input
 
 data = pd.read_csv("full_insecurity.csv")
-data['Date'] = pd.to_datetime(data['Date'], format="%m/%d/%y")
+data['Date'] = pd.to_datetime(data['Date'], format="%m/%d/%Y")
 
 external_stylesheets = [
     {
@@ -30,7 +30,7 @@ app.layout = html.Div(
                 html.P(
                     children="State-by-state security tracker in Nigeria"
                     ""
-                    " From 2011 till date",
+                    " From 2012 till date",
                     className="header-description",
                 ),
             ],
