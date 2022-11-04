@@ -5,8 +5,10 @@ import pandas as pd
 import numpy as np
 from dash.dependencies import Output, Input
 
-data = pd.read_csv("full_insecurity.csv")
+
+data = pd.read_csv("full_insecurity.csv").fillna(0)
 data['Date'] = pd.to_datetime(data['Date'], format="%m/%d/%Y")
+
 
 external_stylesheets = [
     {
@@ -30,7 +32,7 @@ app.layout = html.Div(
                 html.P(
                     children="State-by-state security tracker in Nigeria"
                     ""
-                    " From 2012 till date",
+                    " From 2011 till date",
                     className="header-description",
                 ),
             ],
@@ -106,7 +108,7 @@ def update_charts(state):
         ],
         "layout": {
             "title": {
-                "text": "Monthly Death Reported",
+                "text": "Number of Death Reported",
                 "x": 0.05,
                 "xanchor": "left"
             },
@@ -126,7 +128,7 @@ def update_charts(state):
         ],
         "layout": {
             "title": {
-                "text": "Monthly Incidents by State",
+                "text": "Number of Incidence Occurrence",
                 "x": 0.05,
                 "xanchor": "left"
             },
@@ -140,6 +142,10 @@ def update_charts(state):
 
 if __name__ == "__main__":
     app.run_server(debug=False)
+
+
+
+
 
 
 
